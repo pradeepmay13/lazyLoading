@@ -1,0 +1,15 @@
+<ng-multiselect-dropdown
+  [placeholder]="'custom placeholder'"
+  [data]="dropdownList"
+  [settings]="dropdownSettings"
+  (onSelect)="onItemSelect($event)"
+  (onSelectAll)="onSelectAll($event)"
+>
+</ng-multiselect-dropdown>
+
+<div *ngFor="let name of ['Foo', 'Bar', 'Baz']">
+  <p>Hi, my name is {{name}}. I'm a lazy child component.</p>
+
+  <app-lazy-child></app-lazy-child>
+
+</div>
